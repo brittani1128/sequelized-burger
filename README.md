@@ -1,4 +1,4 @@
-# Britt's Burgers -- Sequelized
+# Britt's Burgers -- Sequelized Version
 
 ## Project Overview
 
