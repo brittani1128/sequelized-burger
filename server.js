@@ -2,11 +2,15 @@
 
 var express = require("express");
 
+
+
 var PORT = process.env.PORT || 8080;
 
 var app = express();
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+
+var db = require("./models");
 
 //BODY PARSER =================================================================
 
@@ -25,11 +29,13 @@ app.set("view engine", "handlebars");
 // ROUTES =====================================================================
 
 // import routes and give the server access to them.
-var routes = require("./controllers/burgers_controller.js");
-app.use(routes);
+require("./routes/api-routes.js")(app);
 
 // START SERVER ===============================================================
 
-app.listen(PORT, function() {
-  console.log("App now listening at localhost:" + PORT);
-});
+db.sequelize.sync().then(function(){
+  app.listen(PORT, function() {
+    console.log("App now listening at localhost:" + PORT);
+  });
+})
+
