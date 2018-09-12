@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/burg2.jpg");
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+}
+
+.container {
+    margin-top:250px;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+}
+
+.section {
+    background:white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#menu {
+    height:600;
+    margin:30px 0px;
+    margin-right:10px;
+}
+
+hr {
+    margin: 10px 0px;
+}
+
+#menuItems {
+    padding: 20px 50px;
+}
+
+.listItem {
+    padding: 10px 0px;
+    font-size:20px;
+    
+}
+
+.wrapper {
+    height:600px;
+    margin: 30px 0px;
+    margin-left:10px;
+    position:relative;
+}
+
+#cart {
+    min-height:200px;
+    /* position:absolute; */
+    top:0;
+    width:100%;
+}
+
+#cartItems {
+    padding: 0px 40px;
+    font-size:16px;
+    margin-bottom:25px;
+}
+
+.cartItem {
+    margin:5px 0px;
+}
+
+#customize {
+    /* position:absolute; */
+    /* bottom:0; */
+    margin-top:40px;
+    width:100%;
+    height:200px;
+}
+
+button {
+    padding:5px;
+    font-size:12px;
+    border-radius: 10px;
+    border:1px solid black;   
+}
+
+.addCart {
+    background-color: #fff054a1;
+    margin-right:10px;
+}
+
+.delete {
+    background-color: #96c6e7b3;
+    
+}
+
+.removeCart {
+    background-color: #a7ea5573;
+    margin-right:10px;
+}
+
+.submit {
+    background-color: #ff9800b5;
+    margin:auto;
+}
+.create-form {
+    padding: 10px 30px;
+    text-align: center;
+    font-size:18px;
+}
+

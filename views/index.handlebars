@@ -1,0 +1,56 @@
+<div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="section" id="menu">
+                <h2 class="text-center">Menu</h2>
+                <hr>
+                <ol id="menuItems">
+                    {{#each burgers}} 
+                      {{#unless inCart}}
+                        <li class="listItem">{{name}}</li>
+                        <button class="addCart" data-id="{{id}}">Add to Cart</button>
+                        <button class="delete" data-id="{{id}}">Delete</button> 
+                        <hr>
+                      {{/unless}}
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="section" id="cart">
+                        <h3 class="text-center">Cart</h3>
+                        <hr>
+                        <ol id="cartItems">
+                            {{#each burgers}} 
+                            {{#if inCart}} 
+                                <li class="cartItem">{{name}}</li>
+                                <button class="removeCart" data-id="{{id}}">Remove from Cart</button>
+                                <button class="delete" data-id="{{id}}">Delete</button> 
+                               
+                            {{/if}} 
+                            {{/each}}
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="section" id="customize">
+                        <h3 class="text-center">Add Your Own!</h3>
+                        <hr>
+                    
+                        <form class="create-form">
+
+                            <div class="form-group">
+                                <label for="newBurgerName">Burger Name:</label>
+                                <input type="text" id="newBurgerName" name="name">
+                            </div>
+                            <button class="submit" type="submit">Add Burger</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
